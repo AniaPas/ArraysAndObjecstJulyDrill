@@ -241,4 +241,21 @@ console.log( 'ttoSring, toUpperCase, Split', companiesArray)
 const longNames = companies.filter((item) => item.length > 3)
 console.log('Companies with names over 3 characters: ', longNames)
 
-//Create a function that
+//Create a function that would check if a company exists in the array. If not, it would add it.
+
+function findCompany (companyArr, companyX) {
+    if(companyArr.includes(companyX) === true) {
+        console.log('this company already exists')
+        return companyArr
+    } else {
+        const newCompanyArr = companyArr.push(companyX)
+        console.log('The company has been added')
+        return newCompanyArr
+    }
+}
+
+const findNike = findCompany(companies, 'Nike')
+console.log (findNike)
+
+const findSamsung = findCompany(companies, 'Samsung')
+console.log(findSamsung, companies)
