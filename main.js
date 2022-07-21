@@ -181,9 +181,26 @@ const doTheSameAsEveryWithForEach = numbersArr.forEach((item) => {
 const states = ['uk', 'spain', 'poland', 'germany', 'france', 'greece']
 const upperStates = states.map((element) => {
   return element.toUpperCase();
-});
+})
 console.log(upperStates.sort((a, b) =>{
     return a - b
 }))
 
+// Return an array take array example1 and return [4, 8, 9, 44]
 
+const example1 = [4, 8, 9, 88]
+
+const example2 = example1.map((item) =>{
+    if(item === 88) {
+        return item /2
+    } else {
+        return item
+    }
+
+})
+console.log(example2)
+
+// Return array [2, 4, 44]
+
+const example3 = example1.filter((item) => item % 2 === 0)
+console.log(example3)
