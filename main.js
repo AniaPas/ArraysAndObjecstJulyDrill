@@ -148,8 +148,8 @@ console.log('joining arrays with UNSHIFT', twoNamesArrraysAFterUnshift)
 }
 const mergedWithALoop = mergeArrays(names1, names2)
 console.log('merged with a loop and push', mergedWithALoop)//Please check this method out 
-
- names1.forEach((item) => {
+//Let's do the same with forEach
+names1.forEach((item) => {
     
 names2.push(item)
 })
@@ -170,7 +170,7 @@ console.log('Are all the numbers lower than 1000? ', lowerThan1000)
 const doTheSameAsEveryWithForEach = numbersArr.forEach((item) => {
     if(item > 1000) {
       
-        console.log('bla2The number is lower')
+        console.log('The number is lower')
     } else {
         console.log('The number is higher than 1000')
     }
@@ -179,3 +179,14 @@ const isMoreThat100 = numbersArr.some((currentValue) => {
     console.log('bla')
     return currentValue > 100
 })
+// Sort the states alphabetically
+
+const states = ['uk', 'spain', 'poland', 'germany', 'france', 'greece']
+const upperStates = states.map((element) => {
+  return element.toUpperCase();
+});
+console.log(upperStates.sort());
+
+//Reverse the elements. Use Sort.
+
+
