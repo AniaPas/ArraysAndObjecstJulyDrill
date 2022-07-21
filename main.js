@@ -175,18 +175,15 @@ const doTheSameAsEveryWithForEach = numbersArr.forEach((item) => {
         console.log('The number is higher than 1000')
     }
 })
-const isMoreThat100 = numbersArr.some((currentValue) => {
-    console.log('bla')
-    return currentValue > 100
-})
-// Sort the states alphabetically
+
+// Sort the states alphabetically in reversed order
 
 const states = ['uk', 'spain', 'poland', 'germany', 'france', 'greece']
 const upperStates = states.map((element) => {
   return element.toUpperCase();
 });
-console.log(upperStates.sort());
-
-//Reverse the elements. Use Sort.
+console.log(upperStates.sort((a, b) =>{
+    return a - b
+}))
 
 
