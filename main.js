@@ -218,7 +218,7 @@ console.log('the result of the reverses string "stressed": ', reversedString)
 
 // Return an array where all companies are in upper cases
 
-const companies = ['Microsoft', 'GLS', 'UPS', 'Apple', 'Peppsi', 'Nike']
+const companies = ['Microsoft', 'GLS', 'UPS', 'Apple', 'Pepsi', 'Nike']
 
 const companiesUpper = companies.map((item) => item.toUpperCase())
 console.log('map, toUppersCase ', companiesUpper)
@@ -235,3 +235,10 @@ console.log('toSring, toUpperCase, Split ', companiesUpper2)
 const companiesUpper3  = companies.toString().toUpperCase()
 const companiesArray = Array.from([companiesUpper3]) //Mind the syntax, the [] within ()
 console.log( 'ttoSring, toUpperCase, Split', companiesArray)
+
+//Return the companies whose names are longer than 3 characters
+
+const longNames = companies.filter((item) => item.length > 3)
+console.log('Companies with names over 3 characters: ', longNames)
+
+//Create a function that
