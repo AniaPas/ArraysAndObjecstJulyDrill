@@ -138,7 +138,7 @@ console.log('joining arrays with UNSHIFT', twoNamesArrraysAFterUnshift)
 
 //Using a LOOP to join two arrays togeter
 
- /*const mergeArrays = (arrToBeMerged, arrToBeMerged2)=> {
+ const mergeArrays = (arrToBeMerged, arrToBeMerged2)=> {
     for(let i = 0; i < arrToBeMerged.length; i++) {
         arrToBeMerged2.push(arrToBeMerged[i])
         
@@ -147,8 +147,13 @@ console.log('joining arrays with UNSHIFT', twoNamesArrraysAFterUnshift)
 
 }
 const mergedWithALoop = mergeArrays(names1, names2)
-console.log('merged with a loop and push', mergedWithALoop)//Please check this method out */
+console.log('merged with a loop and push', mergedWithALoop)//Please check this method out 
 
+ names1.forEach((item) => {
+    
+names2.push(item)
+})
+console.log(names2)
 //use SOME to check if there is a number higher than  4 in the numbersArr.
 
 const numberHigherThan4 = numbersArr.some((item) => {
@@ -164,8 +169,13 @@ console.log('Are all the numbers lower than 1000? ', lowerThan1000)
 // Let's try forEach for the same thing and see the results
 const doTheSameAsEveryWithForEach = numbersArr.forEach((item) => {
     if(item > 1000) {
-        console.log('All numbers are lower than 1000')
+      
+        console.log('bla2The number is lower')
     } else {
-        console.log('Not all numbers are lower than 1000')
+        console.log('The number is higher than 1000')
     }
+})
+const isMoreThat100 = numbersArr.some((currentValue) => {
+    console.log('bla')
+    return currentValue > 100
 })
