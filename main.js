@@ -200,7 +200,17 @@ const example2 = example1.map((item) =>{
 })
 console.log(example2)
 
-// Return array [2, 4, 44]
+// Return array [4, 8, 44]
 
 const example3 = example1.filter((item) => item % 2 === 0)
 console.log(example3)
+
+// Return array [2, 4, 44]
+
+const example4 = example3.map((item) => item / 2)
+console.log(example4)
+// Reverse the string const stressed = 'stressed'
+
+const stressed = 'stressed'
+const reversedString = stressed.split('').reverse().join('')
+console.log('the result of the reverses string "stressed": ', reversedString)
