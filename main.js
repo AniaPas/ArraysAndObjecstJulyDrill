@@ -209,8 +209,29 @@ console.log(example3)
 
 const example4 = example3.map((item) => item / 2)
 console.log(example4)
+
 // Reverse the string const stressed = 'stressed'
 
 const stressed = 'stressed'
 const reversedString = stressed.split('').reverse().join('')
 console.log('the result of the reverses string "stressed": ', reversedString)
+
+// Return an array where all companies are in upper cases
+
+const companies = ['Microsoft', 'GLS', 'UPS', 'Apple', 'Peppsi', 'Nike']
+
+const companiesUpper = companies.map((item) => item.toUpperCase())
+console.log('map, toUppersCase ', companiesUpper)
+
+//or (though less effectively, 3 functions instead of 2:)
+
+const companiesUpper2 = companies.toString().toUpperCase().split(',')
+
+console.log('toSring, toUpperCase, Split ', companiesUpper2)
+ 
+// And, also less effectively
+
+
+const companiesUpper3  = companies.toString().toUpperCase()
+const companiesArray = Array.from([companiesUpper3]) //Mind the syntax, the [] within ()
+console.log( 'ttoSring, toUpperCase, Split', companiesArray)
